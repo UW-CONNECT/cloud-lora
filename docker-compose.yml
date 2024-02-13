@@ -1,0 +1,58 @@
+version: "3"
+services:
+  client1:
+    build:
+      context: ./End_User
+      args:
+        port_t: 63201
+    network_mode: "host"
+      
+  client2:
+    build:
+      context: ./End_User
+      args:
+        port_t: 63202
+    network_mode: "host"
+
+  client3:
+    build:
+      context: ./End_User
+      args:
+        port_t: 63203
+    network_mode: "host"
+
+  client4:
+    build:
+      context: ./End_User
+      args:
+        port_t: 63204
+    network_mode: "host"
+
+  client5:
+    build:
+      context: ./End_User
+      args:
+        port_t: 63205
+    network_mode: "host"
+
+  client6:
+    build:
+      context: ./End_User
+      args:
+        port_t: 63206
+    network_mode: "host"
+
+  client7:
+    build:
+      context: ./End_User
+      args:
+        port_t: 63207
+    network_mode: "host"
+
+  client8:
+    build:
+      context: ./End_User
+      args:
+        port_t: 63208
+    network_mode: "host"
+
