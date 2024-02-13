@@ -1,0 +1,18 @@
+version: "3"
+services:
+  client1:
+    build:
+      context: ./consumer
+      args:
+        channel: 1
+        bs_id: 345
+    network_mode: "host"
+      
+  client2:
+    build:
+      context: ./consumer
+      args:
+        channel: 2
+        bs_id: 678
+    network_mode: "host"
+

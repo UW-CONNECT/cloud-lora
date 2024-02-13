@@ -1,0 +1,23 @@
+1) update file sent from client to have channel ID exposed
+
+2) Need to boot server, have docker processes connect to server
+	- they will connect and send their channel and base_station ID they want
+	- this will allow the server to create a mapping of (ID, channel):(IP, Port)
+	
+3) Beef up consumer so they are constantly receiving (mini version of current impl)
+	
+4) after this, attempt to send data in the reverse direction
+	- start by booting, then connecting dummy client
+	- have a separate thread that waits for incoming connectsion (port 65432)
+	- when incoming packet received, route to docker process (using mapping table)
+	
+	
+PLAN2:
+
+interface is just decompressed active periods
+also define ports for each channel and channel combination
+on the localhost send all of the decompressed packets to consumers
+
+the consumers do the work then. Each message sent is the size, ID, Chan, time, data
+This means interface is just metadata and IQ samples. User can do what they want, just open a socket
+

@@ -1,0 +1,20 @@
+
+#########################################################################
+# to run gnuradio file in background
+
+C:\Users\danko\radioconda\python.exe -u C:\Users\danko\Desktop\L2C_python\GNU_Flow\Round1.py
+
+#########################################################################
+cd Downloads
+ssh -i key2 azureuser@20.228.167.24
+
+sudo apt-get install python3
+sudo apt install git
+git clone https://github.com/Danistheman26/L2C_python.git
+cd L2C_python
+pip install -r Server_reqs.txt
+cd Server
+python3 server.py
+
+
+
